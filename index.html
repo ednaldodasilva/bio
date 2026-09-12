@@ -3,18 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ednaldo | Gestor de Tráfego</title>
+    <title>Ednaldo Júnior | Gestor de Tráfego Analítico</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Configuração de Cores (Paleta Tech/Blue) -->
+    <!-- Configuração da Paleta de Cores de Agência Tech -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkblue: '#0B1120',
-                        cyan: '#06B6D4',
-                        cyanHover: '#0891B2'
+                        'dark-bg': '#070C15', // Fundo quase preto (Bolsa de Valores)
+                        'panel-bg': '#0F172A', // Fundo dos painéis e botões
+                        'cyan-glow': '#06B6D4', // Ciano brilhante para detalhes
+                        'white-text': '#F8FAFC' // Branco para texto
                     }
                 }
             }
@@ -23,86 +24,62 @@
     <!-- Ícones FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        /* Efeito de brilho no hover dos botões */
+        /* Efeito visual de brilho no hover dos botões */
         .btn-link:hover {
-            box-shadow: 0 0 15px rgba(6, 182, 212, 0.5);
-            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+            transform: translateY(-1px);
         }
         .btn-link {
             transition: all 0.3s ease;
         }
+        /* Simulação de Linhas de Gráfico no Fundo (Dev Style) */
+        .chart-bg {
+            background-image: 
+                radial-gradient(circle at 10% 10%, rgba(6, 182, 212, 0.03) 0%, transparent 40%),
+                radial-gradient(circle at 90% 90%, rgba(6, 182, 212, 0.03) 0%, transparent 40%),
+                linear-gradient(rgba(6, 182, 212, 0.01) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(6, 182, 212, 0.01) 1px, transparent 1px);
+            background-size: 100% 100%, 100% 100%, 30px 30px, 30px 30px;
+        }
     </style>
 </head>
-<body class="bg-darkblue text-white min-h-screen flex flex-col items-center justify-between font-sans relative overflow-hidden">
+<body class="bg-dark-bg text-white-text min-h-screen flex flex-col items-center justify-between font-sans chart-bg relative overflow-hidden">
 
-    <!-- Efeito visual de fundo (Opcional, dá uma cara tech) -->
-    <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none" 
-         style="background-image: radial-gradient(circle at 50% 0%, #06B6D4 0%, transparent 50%);"></div>
+    <!-- Fundo simulando Métricas e Dashboard de Alta Performance -->
+    <div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: radial-gradient(circle at 50% -20%, #06B6D4 0%, transparent 60%);"></div>
 
-    <main class="w-full max-w-md px-6 py-12 flex flex-col items-center z-10">
+    <main class="w-full max-w-lg px-6 py-12 flex flex-col items-center z-10">
         
-        <!-- Foto de Perfil -->
-        <!-- Substitua 'sua-foto.jpg' pelo caminho da imagem que cortamos quadrada -->
-        <div class="w-28 h-28 rounded-full border-4 border-cyan overflow-hidden shadow-[0_0_15px_rgba(6,182,212,0.6)] mb-4">
-            <img src="sua-foto.jpg" alt="Ednaldo" class="w-full h-full object-cover">
+        <!-- Foto de Perfil (Área de Destaque) -->
+        <!-- Substitua 'sua-foto.jpg' pelo caminho da imagem quadrada que cortamos -->
+        <div class="w-32 h-32 rounded-full border-4 border-cyan-glow overflow-hidden shadow-[0_0_20px_rgba(6,182,212,0.5)] mb-6">
+            <img src="sua-foto.jpg" alt="Ednaldo Júnior" class="w-full h-full object-cover">
         </div>
 
-        <!-- Título e Bio -->
-        <h1 class="text-2xl font-bold tracking-wide mb-1">EDNALDO JÚNIOR</h1>
-        <p class="text-cyan font-semibold text-sm mb-2">GESTOR DE TRÁFEGO</p>
-        <p class="text-gray-400 text-center text-sm mb-8 px-4">
+        <!-- Título e Bio Analítica (Posicionamento Premium) -->
+        <h1 class="text-3xl font-bold tracking-tight mb-2">EDNALDO JÚNIOR</h1>
+        <p class="text-cyan-glow font-semibold text-base mb-3 uppercase tracking-widest">GESTOR DE TRÁFEGO ANALÍTICO</p>
+        <p class="text-gray-400 text-center text-sm mb-10 px-4 leading-relaxed bg-panel-bg p-4 rounded-xl border border-gray-800 shadow-inner">
             Tráfego Pago não é mágica. É matemática, dados e estratégia.<br>
-            Transformando conhecimento em resultado.
+            Multiplicando as vendas do seu negócio local com inteligência de dados.
         </p>
 
-        <!-- Botões de Link -->
+        <!-- Botões de Link (Central de Conversão) -->
         <div class="w-full flex flex-col gap-4">
             
-            <!-- Link 1: WhatsApp -->
-            <!-- Coloque seu número onde diz SEUNUMERO (ex: 556299999999) -->
-            <a href="https://wa.me/5562986192770?text=Ol%C3%A1%2C%20Ednaldo!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20falar%20sobre%20Tr%C3%A1fego%20Pago." 
-               target="_blank"
-               class="btn-link relative w-full bg-cyan text-darkblue font-bold py-4 rounded-lg flex items-center justify-center gap-3 overflow-hidden">
-                <i class="fab fa-whatsapp text-xl"></i>
-                Fale comigo no WhatsApp
-            </a>
+            <!-- Link Principal: WhatsApp -->
+            <!-- 👉 Substitua 'SEUNUMERO' (ex: 556299999999) -->
+            <a href="https://wa.me/SEUNUMERO?text=Ol%C3%A1%2C%20Ednaldo!%20Vim%20pelo%20Instagram%20e%20gostaria%20de%20conversar%20sobre%20estruturar%20meus%20an%C3Aqui estão os 3 passos para você atualizar seu site no GitHub Pages direto pelo navegador, sem terminal:
 
-            <!-- Link 2: Serviços / Proposta -->
-            <a href="#" 
-               class="btn-link w-full bg-transparent border-2 border-cyan text-white hover:bg-cyan hover:text-darkblue font-semibold py-4 rounded-lg flex items-center justify-center gap-3">
-                <i class="fas fa-chart-line text-xl"></i>
-                Como escalar seu negócio
-            </a>
+### Passo 1: Preparar os Arquivos
+1.  **Edite o Código:** No código acima, não esqueça de trocar as marcações como `SEUNUMERO`, `SUA-FOTO.JPG`, `SEUPERFIL` pelos seus dados reais.
+2.  **Salve:** Salve esse arquivo atualizado como `index.html` na mesma pasta do seu computador onde está a sua foto de perfil.
 
-            <!-- Link 3: GitHub -->
-            <a href="https://github.com/ednaldodasilva" target="_blank"
-               class="btn-link w-full bg-gray-800 border border-gray-700 text-white hover:border-cyan hover:text-cyan font-semibold py-4 rounded-lg flex items-center justify-center gap-3">
-                <i class="fab fa-github text-xl"></i>
-                Background Dev & Dados
-            </a>
+### Passo 2: Atualizar o Repositório no GitHub
+1.  **Acesse:** Entre no GitHub e vá até o seu repositório de links (aquele que criamos, como `bio` ou `links`).
+2.  **Adicionar Arquivos:** Clique no botão **Add file** (Adicionar arquivo) no canto superior direito e selecione **Upload files** (Enviar arquivos).
+3.  **Arraste e Solte:** Arraste o seu novo arquivo `index.html` e o arquivo da sua foto de perfil (`sua-foto.jpg`) para dentro da caixa na tela. O GitHub vai entender que você está substituindo os arquivos antigos.
+4.  **Confirmar:** Desça até o final da página e clique no botão verde **Commit changes** (Confirmar alterações).
 
-        </div>
-
-        <!-- Redes Sociais Menores -->
-        <div class="flex gap-6 mt-10">
-            <a href="https://instagram.com/ednaldoads_" target="_blank" class="text-gray-400 hover:text-cyan text-2xl transition-colors">
-                <i class="fab fa-instagram"></i>
-            </a>
-            <!-- Adicione seu LinkedIn se tiver -->
-            <a href"ednaldojunior" target="_blank" class="text-gray-400 hover:text-cyan text-2xl transition-colors">
-                <i class="fab fa-linkedin"></i>
-            </a>
-            <a href="mailto:ednaldojr1701@gmail.com" class="text-gray-400 hover:text-cyan text-2xl transition-colors">
-                <i class="fas fa-envelope"></i>
-            </a>
-        </div>
-
-    </main>
-
-    <!-- Rodapé Copyright -->
-    <footer class="w-full text-center py-4 text-xs text-gray-500 z-10">
-        &copy; 2026 - Ednaldo TP. Todos os direitos reservados.
-    </footer>
-
-</body>
-</html>
+### Passo 3: Ver a Mágica Acontecer
+O GitHub Pages vai identificar a atualização automaticamente. Aguarde cerca de **1 minuto** e atualize o link que está na sua bio do Instagram. Seu Linktree já estará com a nova paleta de cores, os novos links sociais e o botão de conversão corrigido! Deu certo por aí?
